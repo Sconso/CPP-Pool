@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/14 20:57:41 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/14 21:58:51 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/15 00:42:18 by Myrkskog         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -48,7 +48,6 @@ public:
 		std::cout << "=== END ===" << std::endl << std::endl;
 	}
 
-	T&		operator[](int i) const;
 	T&		operator[](int i);
 	Array&	operator=(Array const &rhs);
 
@@ -108,7 +107,7 @@ T &Array<T>::operator[](int i) {
 }
 
 template< typename T >
-Array<T> &Array<T>::operator=(Array const &rhs) {
+Array<T> &Array<T>::operator=(Array<T> const &rhs) {
 	unsigned int i;
 
 	if (this != &rhs)
@@ -126,4 +125,4 @@ Array<T> &Array<T>::operator=(Array const &rhs) {
 	return (*this);
 }
 
-#endif // ARRAY_HPP
+#endif // ARRAY_TPP
