@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/14 15:43:26 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/14 22:02:07 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/14 22:10:31 by Myrkskog         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -61,6 +61,7 @@ int main(void)
 // ************************************************************************** //
 	std::cout << "========= LET'S DO SOME MANIPS... =========" << std::endl;
 
+// intArray1 affectations
 	std::cout << "\033[32m";
 	std::cout << "for (i = 0; i < intArray1.size(); i++)" << std::endl;
 	std::cout << "    intArray1[i] = i;" << std::endl;
@@ -70,6 +71,7 @@ int main(void)
 		iArray[i] = static_cast<int>(i);
 	iArray.dump("intArray1");
 
+// Array copy
 	std::cout << "\033[32m";
 	std::cout << "int Array 2 = int Array 1: " << std::endl;
 	std::cout << "\033[0m" << std::endl;
@@ -78,6 +80,7 @@ int main(void)
 	iArray.dump("intArray1");
 	iArray2.dump("intArray2");
 
+// intArray1 affectation
 	std::cout << "\033[32m";
 	std::cout << "for (i = 0, j = intArray1.size() - 1; j >= 0; j--, i++)" << std::endl;
 	std::cout << "    intArray1[i] = j;" << std::endl;
@@ -88,6 +91,7 @@ int main(void)
 	iArray.dump("intArray1");
 	iArray2.dump("intArray2");
 
+// floatArray affectation
 	std::cout << "\033[32m";
 	std::cout << "for (i = 0; i < floatArray.size(); i++)" << std::endl;
 	std::cout << "    floatArray1[i] = intArray[i];" << std::endl;
@@ -97,6 +101,7 @@ int main(void)
 		fArray[i] = static_cast<float>(iArray[i]);
 	fArray.dump("floarArray");
 
+// stringArray affectation
 	std::cout << "\033[32m";
 	std::cout << "stringArray[0] = \"Hey !\";" << std::endl;
 	std::cout << "stringArray[1] = \"Yo !\";" << std::endl;
@@ -118,7 +123,7 @@ int main(void)
 
 	sArray.dump("stringArray");
 
-
+// classArray affectation
 	std::cout << "\033[32m";
 	std::cout << "classArray[-1] = 0;" << std::endl;
 	std::cout << "classArray[0] = 5;" << std::endl;
