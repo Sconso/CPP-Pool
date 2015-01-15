@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/14 20:57:41 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/15 00:42:18 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/15 01:17:17 by Myrkskog         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -61,7 +61,7 @@ public:
 		IndexTooLowException(const IndexTooLowException& src) throw() { *this = src; }
 		virtual ~IndexTooLowException() throw() { return ; }
 
-		IndexTooLowException& operator= (const IndexTooLowException& rhs) throw() { (void)rhs; return (*this); }
+		IndexTooLowException& operator= (const IndexTooLowException& rhs) throw() { this->_index = rhs._index; return (*this); }
 		virtual const char* what() const throw() {
 			std::stringstream ss;
 			std::string str;
@@ -83,7 +83,7 @@ public:
 		IndexTooHighException(const IndexTooHighException& src) throw() { *this = src; }
 		virtual ~IndexTooHighException() throw() { return ; }
 
-		IndexTooHighException& operator= (const IndexTooHighException& rhs) throw() { (void)rhs; return (*this); }
+		IndexTooHighException& operator= (const IndexTooHighException& rhs) throw() { this->_index = rhs._index; return (*this); }
 		virtual const char* what() const throw() {
 			std::stringstream ss;
 			std::string str;
