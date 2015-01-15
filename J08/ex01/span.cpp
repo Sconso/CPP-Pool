@@ -6,13 +6,13 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/15 17:45:08 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/15 23:54:48 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/16 00:26:19 by Myrkskog         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include "span.hpp"
 
-# define MAX_NB (2500000)
+# define MAX_NB (25000000)
 
 /* CORE */
 Span::Span(void) : _n(0), _index(0) {
