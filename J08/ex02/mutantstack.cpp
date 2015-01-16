@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/16 00:27:44 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/16 01:33:09 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/16 02:19:15 by Myrkskog         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -32,7 +32,7 @@ MutantStack<T>::~MutantStack(void) {
 /* Operator Overload */
 template <typename T>
 MutantStack<T> &MutantStack<T>::operator=(MutantStack<T> const &rhs) {
-	static_cast<void>(rhs);
+	std::stack<T>::operator=(rhs);
 	return (*this);
 }
 

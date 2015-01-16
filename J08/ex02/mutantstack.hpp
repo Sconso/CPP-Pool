@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/16 00:27:20 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/16 01:25:26 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/16 02:05:58 by Myrkskog         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -30,8 +30,7 @@ public:
 	/* Operator Overload */
 	MutantStack<T> &operator=(MutantStack<T> const &rhs);
 
-	class iterator : public std::iterator<std::input_iterator_tag, T> {
-
+	class iterator : public std::iterator<std::bidirectional_iterator_tag, T> {
 	private:
 		T* _p;
 
@@ -64,7 +63,7 @@ public:
 		}
 		bool		operator==(const iterator& rhs) { return (this->_p == rhs._p); }
 		bool		operator!=(const iterator& rhs) { return (this->_p != rhs._p); }
-		int&		operator*(void) { return ( *(this->_p) ); }
+		T&			operator*(void) { return ( *(this->_p) ); }
 	};
 
     MutantStack<T>::iterator begin();
