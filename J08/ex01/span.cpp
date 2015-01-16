@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/15 17:45:08 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/16 00:26:19 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/16 02:56:18 by sconso           ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -16,17 +16,17 @@
 
 /* CORE */
 Span::Span(void) : _n(0), _index(0) {
-	srand(time(NULL));
+	std::srand(time(NULL));
 	return ;
 }
 Span::Span(Span const &src) {
-	srand(time(NULL));
+	std::srand(time(NULL));
 	*this = src;
 	return ;
 }
 Span::Span(unsigned int n) : _n(n), _index(0)
 {
-	srand(time(NULL));
+	std::srand(std::time(NULL));
 	this->_vector.reserve(n);
 	return ;
 }
@@ -135,7 +135,7 @@ int Span::_getRandomValue(void) const
 {
 	int val;
 
-	val = (rand() % MAX_NB * 2) - MAX_NB;
+	val = (std::rand() % MAX_NB * 2) - MAX_NB;
 	return (val);
 }
 

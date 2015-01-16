@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/16 00:27:44 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/16 02:19:15 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/16 02:57:06 by sconso           ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -19,8 +19,7 @@ MutantStack<T>::MutantStack(void) {
 }
 
 template <typename T>
-MutantStack<T>::MutantStack(MutantStack<T> const &src) {
-	*this = src;
+MutantStack<T>::MutantStack(MutantStack<T> const &src) : std::stack<T>(src) {
 	return ;
 }
 

@@ -6,7 +6,7 @@
 //   By: Myrkskog <marvin@42.fr>                    +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2015/01/15 17:42:44 by Myrkskog          #+#    #+#             //
-//   Updated: 2015/01/15 23:50:11 by Myrkskog         ###   ########.fr       //
+//   Updated: 2015/01/16 02:56:32 by sconso           ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,8 +14,10 @@
 # define SPAN_HPP
 
 # include <iostream>
+# include <algorithm>
 # include <vector>
 # include <ctime>
+# include <cstdlib>
 
 class Span {
 
